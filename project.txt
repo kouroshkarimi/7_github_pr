@@ -2,3 +2,25 @@ GitHub Pull Request Demo
 Version 1.0
 This change was added via a Pull Request.
 This is another change for testing auto pr update.
+Bellow I wrote a matrix multiplication code you can use:
+
+def manual_matrix_multiply(A, B):
+    rows_A = len(A)
+    cols_A = len(A[0])
+    rows_B = len(B)
+    cols_B = len(B[0])
+
+    # Check if multiplication is possible
+    if cols_A != rows_B:
+        raise ValueError("Matrix dimensions do not match!")
+
+    # Create result matrix filled with zeros
+    result = [[0 for _ in range(cols_B)] for _ in range(rows_A)]
+
+    # Triple loop multiplication
+    for i in range(rows_A):
+        for j in range(cols_B):
+            for k in range(cols_A):
+                result[i][j] += A[i][k] * B[k][j]
+
+    return result
