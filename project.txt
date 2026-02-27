@@ -2,3 +2,22 @@ GitHub Pull Request Demo
 Version 1.0
 This change was added via a Pull Request.
 This is another change for testing auto pr update.
+Bellow I wrote a matrix multiplication code you can use:
+
+def matrix_multiply(A, B):
+    """
+    Performs matrix multiplication using PyTorch.
+    
+    Args:
+        A (torch.Tensor): First matrix (m x n)
+        B (torch.Tensor): Second matrix (n x p)
+    
+    Returns:
+        torch.Tensor: Result matrix (m x p)
+    """
+    
+    # Check dimensions
+    if A.shape[1] != B.shape[0]:
+        raise ValueError("Matrix dimensions do not match for multiplication.")
+    
+    return torch.matmul(A, B)
